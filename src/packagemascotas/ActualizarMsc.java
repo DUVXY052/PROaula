@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package packageclientes;
+package packagemascotas;
 
 /**
  *
- * @author nadir
+ * @author USER
  */
-public class Actualizar extends javax.swing.JPanel {
+public class ActualizarMsc extends javax.swing.JPanel {
 
     /**
-     * Creates new form Actualizar
+     * Creates new form ActualizarMsc
      */
-    public Actualizar() {
+    public ActualizarMsc() {
         initComponents();
     }
 
@@ -53,7 +53,7 @@ public class Actualizar extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/packageclientes/captcha (1).png"))); // NOI18N
-        jLabel1.setText("Actualizar Cliente");
+        jLabel1.setText("Actualizar Mascota");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel2.setText("Cedula");
@@ -117,6 +117,11 @@ public class Actualizar extends javax.swing.JPanel {
         jButton2.setText("Vaciar");
 
         jButton3.setText("Buscar");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -168,7 +173,7 @@ public class Actualizar extends javax.swing.JPanel {
                                     .addComponent(jCheckBox2)
                                     .addComponent(jCheckBox1)
                                     .addComponent(jCheckBox5))))
-                        .addContainerGap(107, Short.MAX_VALUE))
+                        .addContainerGap(63, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -224,7 +229,7 @@ public class Actualizar extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButton2)
                         .addComponent(jButton3)))
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -262,6 +267,10 @@ public class Actualizar extends javax.swing.JPanel {
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

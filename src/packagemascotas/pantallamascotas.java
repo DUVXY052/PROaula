@@ -1,38 +1,34 @@
 
-package packageclientes;
+package packagemascotas;
 
 import java.awt.BorderLayout;
 
-public class pantallaclientes extends javax.swing.JFrame {
+public class pantallamascotas extends javax.swing.JFrame {
 
-   
-    public pantallaclientes() {
+  
+    public pantallamascotas() {
         initComponents();
-        this.setTitle("Gestion Clientes");
+         this.setTitle("Gestion Mascotas");
         this.setSize(720,570);
         this.setLocationRelativeTo(null);
-    
     }
-   
+
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         btnRegistrar = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnConsultar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnlistado = new javax.swing.JButton();
-        content = new javax.swing.JPanel();
+        contentM = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        btnGM = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/packageclientes/atencion-al-cliente (3).png"))); // NOI18N
-        jLabel2.setText("Gestion de Clientes");
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnRegistrar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         btnRegistrar.setText("Registrar");
@@ -74,19 +70,34 @@ public class pantallaclientes extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
-        content.setLayout(contentLayout);
-        contentLayout.setHorizontalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        contentM.addContainerListener(new java.awt.event.ContainerAdapter() {
+            public void componentAdded(java.awt.event.ContainerEvent evt) {
+                contentMComponentAdded(evt);
+            }
+        });
+
+        javax.swing.GroupLayout contentMLayout = new javax.swing.GroupLayout(contentM);
+        contentM.setLayout(contentMLayout);
+        contentMLayout.setHorizontalGroup(
+            contentMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 471, Short.MAX_VALUE)
         );
-        contentLayout.setVerticalGroup(
-            contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        contentMLayout.setVerticalGroup(
+            contentMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 368, Short.MAX_VALUE)
         );
 
         jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jButton1.setText("Regresar");
+
+        btnGM.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        btnGM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/mascotas.png"))); // NOI18N
+        btnGM.setText("Gestion Mascota");
+        btnGM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGMActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -94,27 +105,30 @@ public class pantallaclientes extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnActualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnConsultar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnlistado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(42, 42, 42))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnGM)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(42, 42, 42))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnActualizar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnRegistrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnConsultar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnlistado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                        .addComponent(contentM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(jButton1))
+                .addGap(6, 6, 6)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(btnGM, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(52, 52, 52)
@@ -129,86 +143,70 @@ public class pantallaclientes extends javax.swing.JFrame {
                         .addComponent(btnEliminar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(content, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(contentM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-       Registrar p1=new Registrar();
-        p1.setSize(680,420);
-        p1.setLocation(0, 0);
-        content.removeAll();
-        content.add(p1,BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
-        new Registrar().setVisible(true);
-        
+        RegistrarMsc reg=new RegistrarMsc();
+        reg.setSize(680,420);
+        reg.setLocation(0, 0);
+        contentM.removeAll();
+        contentM.add(reg,BorderLayout.CENTER);
+        contentM.revalidate();
+        contentM.repaint();
+        new RegistrarMsc().setVisible(true);
+
+
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-      Actualizar p2=new Actualizar();
+        ActualizarMsc p2=new ActualizarMsc();
         p2.setSize(680,420);
         p2.setLocation(0, 0);
-        content.removeAll();
-        content.add(p2,BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
+        contentM.removeAll();
+        contentM.add(p2,BorderLayout.CENTER);
+        contentM.revalidate();
+        contentM.repaint();
     }//GEN-LAST:event_btnActualizarActionPerformed
 
     private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
-        ConsultarMc p3=new ConsultarMc();
-        p3.setSize(680,420);
-        p3.setLocation(0, 0);
-        content.removeAll();
-        content.add(p3,BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
+        ConsultarMsc cons=new ConsultarMsc();
+        cons.setSize(680,420);
+        cons.setLocation(0, 0);
+        contentM.removeAll();
+        contentM.add(cons,BorderLayout.CENTER);
+        contentM.revalidate();
+        contentM.repaint();
+       
     }//GEN-LAST:event_btnConsultarActionPerformed
 
-    private void btnlistadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlistadoActionPerformed
-     Listado p4=new Listado();
-        p4.setSize(680,420);
-        p4.setLocation(0, 0);
-        content.removeAll();
-        content.add(p4,BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
-    }//GEN-LAST:event_btnlistadoActionPerformed
-
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-      Eliminar p5=new Eliminar();
-        p5.setSize(680,420);
-        p5.setLocation(0, 0);
-        content.removeAll();
-        content.add(p5,BorderLayout.CENTER);
-        content.revalidate();
-        content.repaint();
+        
     }//GEN-LAST:event_btnEliminarActionPerformed
 
- 
+    private void btnlistadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlistadoActionPerformed
+        
+    }//GEN-LAST:event_btnlistadoActionPerformed
+
+    private void btnGMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGMActionPerformed
+        new pantallamascotas().setVisible(true);
+    }//GEN-LAST:event_btnGMActionPerformed
+
+    private void contentMComponentAdded(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_contentMComponentAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_contentMComponentAdded
+
     public static void main(String args[]) {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new pantallaclientes().setVisible(true);
+                new pantallamascotas().setVisible(true);
             }
         });
     }
@@ -217,11 +215,11 @@ public class pantallaclientes extends javax.swing.JFrame {
     private javax.swing.JButton btnActualizar;
     private javax.swing.JButton btnConsultar;
     private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnGM;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JButton btnlistado;
-    private javax.swing.JPanel content;
+    private javax.swing.JPanel contentM;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

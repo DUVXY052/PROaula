@@ -10,10 +10,10 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author nadir
  */
-public class Consultar extends javax.swing.JPanel {
+public class ConsultarMc extends javax.swing.JPanel {
 
     DefaultTableModel modelo=new DefaultTableModel();
-    public Consultar() {
+    public ConsultarMc() {
         initComponents();
           modelo.addColumn("Cedula");
         modelo.addColumn("Nombre");
@@ -52,6 +52,11 @@ public class Consultar extends javax.swing.JPanel {
         jLabel2.setText("Cedula");
 
         jButton1.setText("Buscar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         tblusuarios2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -113,6 +118,10 @@ public class Consultar extends javax.swing.JPanel {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

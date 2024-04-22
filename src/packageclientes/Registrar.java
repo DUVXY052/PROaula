@@ -4,6 +4,9 @@
  */
 package packageclientes;
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author nadir
@@ -29,11 +32,11 @@ public class Registrar extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        etiCedulaRcliente = new javax.swing.JTextField();
+        etiCedula = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         etiNombreRcliente = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        etiApellidosRcliente = new javax.swing.JTextField();
+        etiApellido = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -50,9 +53,9 @@ public class Registrar extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         jLabel2.setText("Cedula");
 
-        etiCedulaRcliente.addActionListener(new java.awt.event.ActionListener() {
+        etiCedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                etiCedulaRclienteActionPerformed(evt);
+                etiCedulaActionPerformed(evt);
             }
         });
 
@@ -79,6 +82,11 @@ public class Registrar extends javax.swing.JPanel {
         });
 
         btnGuardarRcliente.setText("Guardar");
+        btnGuardarRcliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarRclienteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -97,7 +105,7 @@ public class Registrar extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(etiNombreRcliente, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(etiCedulaRcliente, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(etiCedula, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5)
@@ -110,10 +118,12 @@ public class Registrar extends javax.swing.JPanel {
                                 .addComponent(btnVaciarRcliente)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                                 .addComponent(btnGuardarRcliente))
-                            .addComponent(etiApellidosRcliente)
                             .addComponent(etiTelefonoRcliente)
                             .addComponent(etiCorreoRcliente)
-                            .addComponent(etiDireccionRcliente))))
+                            .addComponent(etiDireccionRcliente)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(etiApellido)))))
                 .addContainerGap(71, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -123,7 +133,7 @@ public class Registrar extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(etiCedulaRcliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(etiCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -131,7 +141,7 @@ public class Registrar extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(etiApellidosRcliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(etiApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -167,20 +177,80 @@ public class Registrar extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void etiCedulaRclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etiCedulaRclienteActionPerformed
+    private void etiCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etiCedulaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_etiCedulaRclienteActionPerformed
+    }//GEN-LAST:event_etiCedulaActionPerformed
 
     private void btnVaciarRclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVaciarRclienteActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVaciarRclienteActionPerformed
 
+    private void btnGuardarRclienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarRclienteActionPerformed
+          int validacion = 0;
+        String Nombre,cedula,correo,telefono,direccion,apellido;
+        Nombre = etiNombreRcliente.getText().trim();
+        correo = etiCorreoRcliente.getText().trim();
+        telefono = etiTelefonoRcliente.getText().trim();
+        direccion = etiDireccionRcliente.getText().trim();
+        apellido = etiApellido.getText().trim();
+        cedula = etiCedula.getText().trim();
+        
+            if (Nombre.equals("")){
+               etiNombreRcliente.setBackground(Color.red);
+               validacion++;         
+            }
+            if (apellido.equals("")){
+               etiNombreRcliente.setBackground(Color.red);
+               validacion++;         
+            }
+            
+            if (cedula.equals("")){
+               etiCedula.setBackground(Color.red);
+               validacion++;         
+            }
+            
+            
+            if (correo.equals("")){
+               etiCorreoRcliente.setBackground(Color.red);
+               validacion++;
+            }   
+            
+            if (telefono.equals("")){
+               etiTelefonoRcliente.setBackground(Color.red);
+               validacion++;
+            }
+            
+            if (direccion.equals("")){
+               etiDireccionRcliente.setBackground(Color.red);
+               validacion++;   
+            }
+            
+            if (validacion != 0){
+                JOptionPane.showMessageDialog(null, "Se deben completar todos los campos");
+            } else {
+                etiNombreRcliente.setBackground(Color.green);
+                etiCedula.setBackground(Color.green);
+                etiNombreRcliente.setBackground(Color.green);
+                etiCorreoRcliente.setBackground(Color.green);
+                etiTelefonoRcliente.setBackground(Color.green);
+                etiDireccionRcliente.setBackground(Color.green);
+                etiApellido.setBackground(Color.green);
+                JOptionPane.showMessageDialog(null, "Registro Exitoso");
+                
+                
+            }
+            
+                          
+            
+            
+    }//GEN-LAST:event_btnGuardarRclienteActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGuardarRcliente;
     private javax.swing.JButton btnVaciarRcliente;
-    private javax.swing.JTextField etiApellidosRcliente;
-    private javax.swing.JTextField etiCedulaRcliente;
+    private javax.swing.JTextField etiApellido;
+    private javax.swing.JTextField etiCedula;
     private javax.swing.JTextField etiCorreoRcliente;
     private javax.swing.JTextField etiDireccionRcliente;
     private javax.swing.JTextField etiNombreRcliente;
