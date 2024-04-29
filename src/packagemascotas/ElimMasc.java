@@ -10,9 +10,9 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author nadir
  */
-public class Eliminar extends javax.swing.JPanel {
+public class ElimMasc extends javax.swing.JPanel {
 DefaultTableModel modelo=new DefaultTableModel();
-    public Eliminar() {
+    public ElimMasc() {
         initComponents();
         modelo.addColumn("Cedula");
         modelo.addColumn("Nombre");

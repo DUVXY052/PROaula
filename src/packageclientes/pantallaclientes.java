@@ -194,7 +194,7 @@ public class pantallaclientes extends javax.swing.JFrame {
     }//GEN-LAST:event_btnlistadoActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-      Eliminar p5=new Eliminar();
+      ElimMasc p5=new ElimMasc();
         p5.setSize(680,420);
         p5.setLocation(0, 0);
         content.removeAll();

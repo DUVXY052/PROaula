@@ -1,13 +1,13 @@
 
-package packageclientes;
+package packagemascotas;
 
 import javax.swing.table.DefaultTableModel;
 
 
-public class Listado extends javax.swing.JPanel {
+public class ListadoM extends javax.swing.JPanel {
 
    DefaultTableModel modelo=new DefaultTableModel();
-    public Listado() {
+    public ListadoM() {
         initComponents();
         modelo.addColumn("Cedula");
         modelo.addColumn("Nombre");
@@ -31,7 +31,7 @@ public class Listado extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/packageclientes/lista.png"))); // NOI18N
-        jLabel1.setText("Listado Clientes");
+        jLabel1.setText("Listado Mascotas");
 
         tblusuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
